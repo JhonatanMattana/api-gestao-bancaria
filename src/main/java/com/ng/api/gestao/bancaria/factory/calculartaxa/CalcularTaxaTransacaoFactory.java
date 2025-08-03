@@ -1,4 +1,4 @@
-package com.ng.api.gestao.bancaria.factory.calculartaxa.com.ng.gestao.bancaria.api.calculataxa;
+package com.ng.api.gestao.bancaria.factory.calculartaxa;
 
 import com.ng.api.gestao.bancaria.enums.FormaPagamento;
 import com.ng.api.gestao.bancaria.exception.GestaoBancariaException;
