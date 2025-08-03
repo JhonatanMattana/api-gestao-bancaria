@@ -1,5 +1,6 @@
 package com.ng.api.gestao.bancaria.model;
 
+import com.ng.api.gestao.bancaria.enums.FormaPagamento;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -26,4 +27,7 @@ public class Transacao {
     @Column(name = "VALOR", columnDefinition = "DECIMAL(10,2)")
     private float valor;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "FORMA_PAGAMENTO")
+    private FormaPagamento formaPagamento;
 }
