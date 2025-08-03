@@ -1,16 +1,25 @@
 package com.ng.api.gestao.bancaria.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.ng.api.gestao.bancaria.controller.dto.ContaDto;
+import com.ng.api.gestao.bancaria.service.ContaService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/conta")
 public class ContaController {
 
-    @GetMapping
-    public String teste() {
-        return "aplicação esta funcionando";
+    private final ContaService service;
+
+    public ContaController(ContaService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public ResponseEntity<ContaDto> criarConta(@RequestBody ContaDto dto) {
+        ContaDto contaCriada = this.service.criarConta(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(contaCriada);
     }
 
 }

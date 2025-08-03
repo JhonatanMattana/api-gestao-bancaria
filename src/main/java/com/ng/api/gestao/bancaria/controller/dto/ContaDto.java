@@ -1,4 +1,4 @@
-package com.ng.api.gestao.bancaria.dto;
+package com.ng.api.gestao.bancaria.controller.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
