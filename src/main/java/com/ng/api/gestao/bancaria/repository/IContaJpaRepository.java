@@ -8,4 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface IContaJpaRepository extends JpaRepository<Conta, UUID> {
+    Conta getContaByNumero(Integer numeroConta);
+    Boolean existsByNumero(Integer numeroConta);
 }
