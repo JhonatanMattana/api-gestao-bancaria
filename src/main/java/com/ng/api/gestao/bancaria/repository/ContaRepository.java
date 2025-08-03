@@ -18,4 +18,12 @@ public class ContaRepository {
         conta.setSaldo(dto.getSaldo());
         return this.jpaRepository.save(conta);
     }
+
+    public Boolean existsByNumero(Integer numeroConta) {
+        return this.jpaRepository.existsByNumero(numeroConta);
+    }
+
+    public Conta getContaByNumero(Integer numeroConta) {
+        return this.jpaRepository.getContaByNumero(numeroConta);
+    }
 }
