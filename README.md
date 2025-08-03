@@ -1,6 +1,6 @@
 # API de Gestão Bancária
 
-Este projeto é uma API simples de gestão bancária construída com **Spring Boot 3.4.8** e **JDK 21**.
+Este projeto é uma API simples de gestão bancária construída com **Spring Boot 3.4.8** e **JDK 17**.
 
 ---
 
