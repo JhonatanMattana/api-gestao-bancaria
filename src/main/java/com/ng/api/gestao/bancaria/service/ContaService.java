@@ -15,4 +15,9 @@ public class ContaService {
         Conta conta = repository.salvar(dto);
         return new ContaDto(conta.getNumero(), conta.getSaldo());
     }
+
+    public ContaDto getContaPorNumero(Integer numeroConta) {
+        Conta conta = repository.getContaByNumero(numeroConta);
+        return new ContaDto(conta.getNumero(), conta.getSaldo());
+    }
 }

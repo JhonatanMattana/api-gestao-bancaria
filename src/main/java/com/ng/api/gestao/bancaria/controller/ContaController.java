@@ -22,4 +22,9 @@ public class ContaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(contaCriada);
     }
 
+    @GetMapping
+    public ResponseEntity<ContaDto> getConta(@RequestParam("numero_conta") Integer numero_conta) {
+        ContaDto conta = this.service.getContaPorNumero(numero_conta);
+        return ResponseEntity.status(HttpStatus.OK).body(conta);
+    }
 }
